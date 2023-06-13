@@ -131,7 +131,7 @@ E_rep =[[0,0],[0,np.pi],[np.pi/2,0],[-np.pi/2,0],[0,np.pi/2],[0,-np.pi/2],  #Fin
         [0,-3*np.pi/4],[0,-np.pi/4],[0,np.pi/4],[0,3*np.pi/4],
         [np.pi/4,-np.pi/2],[np.pi/4,0],[np.pi/4,np.pi/2],[np.pi/4,np.pi]]   #Fill points
 
-def Closest_Point(rotation_M, centroids, D,y,u, collision):
+def Closest_Point(rotation_M, centroids, D,y,u, collision):  #Determines if a collision occurs and the points of contact 
 
   c21= np.matmul( rotation_M[y].transpose() , centroids[u]-centroids[y])
   K = np.matmul( rotation_M[y].transpose() ,  np.matmul( rotation_M[u] , np.matmul( D, np.matmul( rotation_M[u].transpose() , rotation_M[y]))))
